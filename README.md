@@ -2,30 +2,33 @@
 
 <h2 align="center">About me</h2>
 
-```golang
-package main
-
-import (
-	"fmt"
-)
-
-type Bio map[string]string
-
-func main() {
-	for k, v := range GetBio() {
-		fmt.Printf("%+v: %+v\n", k, v)
-	}
+```ts
+type Bio {
+  quickBio: string;
+  currentlyWorkingOn: string;
+  lookingToCollaborate: boolean;
+  collaborationOpportunities?: string;
+  contactInfo: {
+    github: string;
+    linkedIn?: string;
+    twitter?: string;
+    email: string;
+  }
 }
 
-func GetBio() Bio {
-	return Bio{
-		"- ⚡ Quick bio:":                    "Endlessly curious, endlessly eager to tell you about it",
-		"- 🔭 I’m currently working on":      "C2FO as a Software Engineer",
-		"- 🌱 I’m currently learning":        "TypeScript, GraphQL, Serverless, K8s, React --- Sharpening my Front End Skills",
-		"- 👯 I’m looking to collaborate on": "My side project --- https://github.com/isomorph-research",
-		"- 💬 Ask me about":                  "Anything! I'm very chatty, and would love to get to know you.",
-		"- 📫 How to reach me:":              "https://github.com/cooper-healy#you-can-reach-me-at",
-	}
+const getBio(): Bio {
+  return {
+    quickBio: "Endlessly curious, endlessly eager to tell you about it",
+    currentlyWorkingOn: "C2FO as a Software Engineer",
+    currentlyLearning:        "TypeScript, GraphQL, Serverless, K8s, React --- Sharpening my Front End Skills",
+    lookingToCollaborate: true,
+    collaborationOpportunities: "My side project --- https://github.com/isomorph-research",
+    contactInfo: {
+      gitHub: "https://github.com/cooper-healy#you-can-reach-me-at",
+      linkedIn: "https://www.linkedin.com/in/cooper-healy-a6140718a/",
+      email: "m.cooper.healy@gmail.com",
+    }
+  }
 }
 ```
 
