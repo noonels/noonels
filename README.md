@@ -3,7 +3,7 @@
 <h2 align="center">About me</h2>
 
 ```ts
-type Bio {
+type Bio = {
   quickBio: string;
   currentlyWorkingOn: string;
   lookingToCollaborate: boolean;
