@@ -20,7 +20,7 @@ const getBio(): Bio {
   return {
     quickBio: "Endlessly curious, endlessly eager to tell you about it",
     currentlyWorkingOn: "C2FO as a Software Engineer",
-    currentlyLearning:        "TypeScript, GraphQL, Serverless, K8s, React --- Sharpening my Front End Skills",
+    currentlyLearning: "TypeScript, GraphQL, Serverless, K8s, React --- Sharpening my Front End Skills",
     lookingToCollaborate: true,
     collaborationOpportunities: "My side project --- https://github.com/isomorph-research",
     contactInfo: {
