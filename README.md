@@ -52,14 +52,3 @@ const getBio(): Bio {
     <img src="https://cdn.worldvectorlogo.com/logos/stackshare.svg" alt="M Cooper Healy's StackShare Profile" height="30" width="30">
   </a>
 </p>
-
-
-<h2 align="center">Github stats :bar_chart:</h2>
-
-<h4 align="center">Top languages</h4>
-
-<p align="center"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=cooper-healy&langs_count=10&layout=compact" alt="cooper-healy :: Top Langs" /></p>
-
-<h4 align="center">Profile stats</h4>
-
-<p align="center"><img src="https://github-readme-stats.vercel.app/api?username=cooper-healy" alt="cooper-healy :: Profile Stats" /></p>
