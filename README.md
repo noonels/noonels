@@ -63,10 +63,10 @@ program introduction
         current_project = 'Teaching myself the ins and outs of Scientific Computing -- mostly using Fortran and Julia',&
         looking_to_collaborate = .true.,&
         contact_info = contact_info_t(&
-        github = 'github.com/noonels', &
-        linkedIn = 'linkedin.com/in/cooper-healy-a6140718a/', &
-        email = 'm.cooper.healy@gmail.com'&
-        )&
+            github = 'github.com/noonels', &
+            linkedIn = 'linkedin.com/in/cooper-healy-a6140718a/', &
+            email = 'm.cooper.healy@gmail.com'&
+            )&
         )
 
     call bio%print_introduction()
