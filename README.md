@@ -1,6 +1,6 @@
 # Hi there, I'm Cooper! 👋
 
-<h2 align="center">About me</h2>
+<h2 align="center">About Me</h2>
 
 ```f95
 ! Outputs:
