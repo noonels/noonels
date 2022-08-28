@@ -2,34 +2,66 @@
 
 <h2 align="center">About me</h2>
 
-```ts
-type Bio = {
-  quickBio: string;
-  currentlyWorkingOn: string;
-  lookingToCollaborate: boolean;
-  collaborationOpportunities?: string;
-  contactInfo: {
-    github: string;
-    linkedIn?: string;
-    twitter?: string;
-    email: string;
-  }
-}
+```fortran
+module bio_m
+    use iso_varying_string, only: varying_string
 
-const getBio(): Bio {
-  return {
-    quickBio: "Endlessly curious, endlessly eager to tell you about it",
-    currentlyWorkingOn: "C2FO as a Software Engineer",
-    currentlyLearning: "TypeScript, GraphQL, Serverless, K8s, React --- Sharpening my Front End Skills",
-    lookingToCollaborate: true,
-    collaborationOpportunities: "My side project --- https://github.com/isomorph-research",
-    contactInfo: {
-      gitHub: "https://github.com/cooper-healy#you-can-reach-me-at",
-      linkedIn: "https://www.linkedin.com/in/cooper-healy-a6140718a/",
-      email: "m.cooper.healy@gmail.com",
-    }
-  }
-}
+    type :: contact_info_t
+        type(varying_string) :: github
+        type(varying_string) :: linkedIn
+        type(varying_string) :: email
+    end type
+
+    type :: bio_t
+        type(varying_string) :: summary
+        type(varying_string) :: current_project
+        logical :: looking_to_collaborate
+        class(contact_info_t), allocatable :: contact_info
+
+    contains
+        private
+        procedure, public :: print_introduction
+    end type
+
+contains
+
+    subroutine print_introduction(self)
+        class(bio_t), intent(inout) :: self
+
+        print *, 'Summary:\t', self%summary
+        print *, 'Currently Working On:\t', self%current_project
+        print *, 'Looking to Collaborate:\t', self%looking_to_collaborate
+        print *, 'Contact Info:'
+        print *, '\tGithub:\t', self%contact_info%github
+        print *, '\tLinkedIn:\t', self%contact_info%linkedIn
+        print *, '\tEmail:\t', self%contact_info%email
+
+    end subroutine
+
+end module
+
+program introduction
+    use bio_m, only: bio_t, contact_info_t
+
+    type(bio_t) :: bio
+
+    print *, 'M. Cooper Healy -- Introduction'
+
+    bio = bio_t(&
+        summary = 'Endlessly curious, endlessly eager to tell you about it', &
+        current_project = 'Teaching myself the ins and outs of Scientific Computing -- mostly using Fortran and Julia',&
+        looking_to_collaborate = .true.,&
+        contact_info = contact_info_t(&
+        github = 'github.com/noonels', &
+        linkedIn = 'linkedin.com/in/cooper-healy-a6140718a/', &
+        email = 'm.cooper.healy@gmail.com'&
+        )&
+        )
+
+    call bio%print_introduction()
+
+end program
+
 ```
 
 <h2 align="center">How to Reach Me</h2>
