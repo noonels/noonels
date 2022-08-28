@@ -2,7 +2,7 @@
 
 <h2 align="center">About me</h2>
 
-```fortran free form
+```fortran\ free\ form
 ! Outputs:
 !
 ! M. Cooper Healy -- Introduction
