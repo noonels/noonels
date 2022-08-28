@@ -3,6 +3,17 @@
 <h2 align="center">About me</h2>
 
 ```fortran
+! Outputs:
+!
+! M. Cooper Healy -- Introduction
+! Summary:                Endlessly curious, endlessly eager to tell you about it
+! Currently Working On:   Teaching myself the ins and outs of Scientific Computing -- mostly using Fortran and Julia
+! Looking to Collaborate: .true.
+! Contact Info:
+!         Github:   github.com/noonels
+!         LinkedIn: linkedin.com/in/cooper-healy-a6140718a/
+!         Email:    m.cooper.healy@gmail.com
+
 module bio_m
     use iso_varying_string, only: varying_string
 
