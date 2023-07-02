@@ -1,7 +1,5 @@
 # Hi there, I'm Cooper!
 
-[![Github Stats](https://github-readme-stats.vercel.app/api?username=noonels&count_private=true&show_icons=true)](https://github.com/noonels)
-
 ```go
 cooper := About {
      Summary: "Endlessly curious, endlessly eager to tell you about it",
